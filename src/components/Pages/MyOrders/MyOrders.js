@@ -45,7 +45,8 @@ const MyOrders = () => {
                         <p>Address: {booking.address}</p>
                         <p>Mobile:{booking.phone}</p>
                         <p className={`bg-primary d-inline p-2 rounded ${(booking.status === "Confirmed") ? 'bg-success' : 'bg-warning'}`}>Status: <b>{booking.status}</b></p>
-                        <br /> <button onClick={() => handleDelete(booking._id)} className="btn btn-danger m-3">Cancel Booking</button>
+                        <br />
+                        <button onClick={() => handleDelete(booking._id)} className="btn btn-danger m-3">Cancel Booking</button>
                     </div>
                 )
             }
