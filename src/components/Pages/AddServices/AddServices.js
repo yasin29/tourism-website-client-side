@@ -12,7 +12,7 @@ const AddServices = () => {
         axios.post('https://pacific-ocean-19299.herokuapp.com/villas', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('Added Successfully');
+                    alert('New Villa Added Successfully');
                     reset();
                 }
             })

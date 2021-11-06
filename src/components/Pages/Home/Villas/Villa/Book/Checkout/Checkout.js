@@ -21,7 +21,7 @@ const Checkout = () => {
         axios.post('https://pacific-ocean-19299.herokuapp.com/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('Added Successfully');
+                    alert('Booking request added Successfully');
                     reset();
                 }
             })

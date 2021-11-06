@@ -11,6 +11,28 @@ const MyOrders = () => {
     }, []);
     console.log(bookings);
     console.log(user);
+
+    const handleDelete = id => {
+        const proceed = window.confirm("Are you sure to cancel this booking?")
+        if (proceed) {
+            const url = `https://pacific-ocean-19299.herokuapp.com/bookings/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount) {
+                        alert('Booking Canceled');
+                        const remaining = bookings.filter(booking => booking._id !== id);
+                        setBookings(remaining);
+                    }
+
+                })
+        }
+    }
+
+
     return (
         <div className="container">
             <h1>My Bookings</h1>
@@ -23,6 +45,7 @@ const MyOrders = () => {
                         <p>Address: {booking.address}</p>
                         <p>Mobile:{booking.phone}</p>
                         <p className={`bg-primary d-inline p-2 rounded ${(booking.status === "Confirmed") ? 'bg-success' : 'bg-warning'}`}>Status: <b>{booking.status}</b></p>
+                        <br /> <button onClick={() => handleDelete(booking._id)} className="btn btn-danger m-3">Cancel Booking</button>
                     </div>
                 )
             }

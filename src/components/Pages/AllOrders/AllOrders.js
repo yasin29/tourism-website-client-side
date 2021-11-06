@@ -20,7 +20,7 @@ const AllOrders = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    alert('Booking Confirmed');
+                    alert('Congratulations! Your Booking is Confirmed');
                     setChange('Confirmed');
                 }
             })

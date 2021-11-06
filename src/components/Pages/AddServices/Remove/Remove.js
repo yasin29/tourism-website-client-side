@@ -18,7 +18,7 @@ const Remove = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount) {
-                        alert('Villa Deleted');
+                        alert('Selected Villa Deleted');
                         const remaining = villas.filter(villa => villa._id !== id);
                         setVillas(remaining);
                     }
