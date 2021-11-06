@@ -16,7 +16,7 @@ const MyOrders = () => {
             <h1>My Bookings</h1>
             {
                 bookings.map(booking =>
-                    (user.email === booking.email) && <div key={booking._id} className="bg-secondary text-white rounded p-3 m-5 w-50 mx-auto">
+                    ((user.email === booking.email) || (user.displayName === booking.name)) && <div key={booking._id} className="bg-secondary text-white rounded p-3 m-5 w-50 mx-auto">
                         <h2>Villa Name: {booking.booking.name}</h2>
                         <p>Booking ID : {booking._id.slice(19, 24)}</p>
                         <h4>Name:  {booking.name}</h4>
