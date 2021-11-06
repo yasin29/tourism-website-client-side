@@ -22,12 +22,12 @@ const Header = () => {
                         >
                             <Nav.Link className="text-white navName" as={Link} to="/home">Home</Nav.Link>
                             <NavDropdown className="text-white navName" title="Our Villas" id="navbarScrollingDropdown">
-                                <NavDropdown.Item as={HashLink} to="#PRESIDENTIAL VILLA">Presidential Villa</NavDropdown.Item>
-                                <NavDropdown.Item as={HashLink} to="#SUPER LUXURY VILLA">Super Luxury Villa</NavDropdown.Item>
-                                <NavDropdown.Item as={HashLink} to="#LUXURY VILLA">Luxury Villa</NavDropdown.Item>
-                                <NavDropdown.Item as={HashLink} to="#LUXURY VILLA 2">Luxury Villa 2</NavDropdown.Item>
-                                <NavDropdown.Item as={HashLink} to="#DELUXE VILLA">Deluxe Villa</NavDropdown.Item>
-                                <NavDropdown.Item as={HashLink} to="#DELUXE VILLA 2">Deluxe Villa(without pool)</NavDropdown.Item>
+                                <NavDropdown.Item as={HashLink} to="/home#PRESIDENTIAL VILLA">Presidential Villa</NavDropdown.Item>
+                                <NavDropdown.Item as={HashLink} to="/home#SUPER LUXURY VILLA">Super Luxury Villa</NavDropdown.Item>
+                                <NavDropdown.Item as={HashLink} to="/home#LUXURY VILLA">Luxury Villa</NavDropdown.Item>
+                                <NavDropdown.Item as={HashLink} to="/home#LUXURY VILLA 2">Luxury Villa 2</NavDropdown.Item>
+                                <NavDropdown.Item as={HashLink} to="/home#DELUXE VILLA">Deluxe Villa</NavDropdown.Item>
+                                <NavDropdown.Item as={HashLink} to="/home#DELUXE VILLA 2">Deluxe Villa(without pool)</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link className="text-white navName" as={HashLink} to="/home#activities">Activities</Nav.Link>
                             {
