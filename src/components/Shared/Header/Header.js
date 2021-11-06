@@ -31,14 +31,14 @@ const Header = () => {
                             </NavDropdown>
                             <Nav.Link className="text-white navName" as={HashLink} to="/home#activities">Activities</Nav.Link>
                             {
-                                user?.displayName && <Nav.Link className="text-white navName" as={Link} to="/myorders">My Orders</Nav.Link>
+                                user?.displayName && <Nav.Link className="text-white navName" as={Link} to="/myorders">My Booking</Nav.Link>
                             }
                             {
-                                user?.displayName && <Nav.Link className="text-white navName" as={Link} to="/allorders">All Orders</Nav.Link>
+                                user?.displayName && <Nav.Link className="text-white navName" as={Link} to="/allorders">All Bookings</Nav.Link>
                             }
 
                             {
-                                user?.displayName && <Nav.Link className="text-white navName" as={Link} to="/addservices">Add Services</Nav.Link>
+                                user?.displayName && <Nav.Link className="text-white navName" as={Link} to="/addservices">Manage Services</Nav.Link>
                             }
                             {
                                 user?.displayName && <Navbar.Text id="userDisplayName" className="text-white bg-secondary rounded p-2 mx-lg-2 my-sm-2" >
